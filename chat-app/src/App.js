@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Contact from "./Components/Contact";
 
@@ -10,23 +9,28 @@ const Contact1 = {
   online : "online",
 };
 
+
+const Contact2 = {
+  image : "https://randomuser.me/api/portraits/men/4.jpg",
+  name : "Jared Fields",
+  online : "",
+};
+
+const Contact3 = {
+  image : "https://randomuser.me/api/portraits/men/94.jpg",
+  name : "Bradley Taylor",
+  online : "online",
+};
+
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
         <Contact {...Contact1}/>
+        <Contact {...Contact2}/>
+        <Contact {...Contact3}/>
       </header>
     </div>
   );
