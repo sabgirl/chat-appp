@@ -3,15 +3,15 @@ import './Contact.css';
 import PropTypes from 'prop-types';
 
 
-const Contact = ({ image, name, online }) => {
+const Contact = ({ avatar, name, status }) => {
     return (
         <div className="Contact">
-            <img src={image} alt="avatar" className="avatar" />
+            <img src={avatar} alt="avatar" className="avatar" />
             <div>
                 <h4 className="name">{name}</h4>
                 <div className="status">
-                    {online ? <div className="status-online"></div> : <div className="status-offline"></div>}
-                    {online ? <div className="status-text">Online</div> : <div className="status-text">Offline</div>}
+                    {status ? <div className="status-online"></div> : <div className="status-offline"></div>}
+                    {status ? <div className="status-text">Online</div> : <div className="status-text">Offline</div>}
                 </div>
             </div>
         </div>
